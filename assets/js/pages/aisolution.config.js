@@ -1,0 +1,9 @@
+window.SancSmoothScrollConfig = window.SancSmoothScrollConfig || {};
+window.SancSmoothScrollConfig.enabled = true;
+window.SancSmoothScrollConfig.force = true;
+window.SancSmoothScrollConfig.mode = 'inertia';
+window.SancSmoothScrollConfig.lerp = 0.03;
+window.SancSmoothScrollConfig.wheelMultiplier = 0.06;
+window.SancSmoothScrollConfig.friction = 0.94;
+window.SancSmoothScrollConfig.maxVelocity = 80;
+window.SancSmoothScrollConfig.respectReducedMotion = false;

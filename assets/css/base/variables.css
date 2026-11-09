@@ -1,0 +1,51 @@
+/* 
+---------------------------------------------
+                  Variabls
+--------------------------------------------- 
+*/
+:root {
+  /* Font Sizes */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-base: 16px;
+  --font-md: 18px;
+  --font-lg: 20px;
+  --font-xl: 22px;
+  --font-2xl: 24px;
+  --font-3xl: 26px;
+  --font-4xl: 28px;
+  --font-5xl: 30px;
+  --font-6xl: 32px;
+
+  --font-paper: "Paperlogy", sans-serif;
+  --font-pretendard: "Pretendard", sans-serif;
+
+  /* Point Colors */
+  --primary: #003685;
+  --orange: #EF8A5F;
+  --brown: #6B635B;
+  --bg: #F5F2EE;
+
+  --black: #101010;
+  --black-900: #3F3F3F;
+  --black-800: #464646;
+  --black-700: #828282;
+  --black-600: #8C8C8C;
+  --black-500: #C3C3C3;
+  --black-400: #B9B9B9;
+  --black-300: #E5E5E5;
+  --black-200: #DDDDDD;
+  --black-100: #F0F0F0;
+
+  --white: #FFFFFF;
+  --white-100: rgba(255, 255, 255, 1);
+  --white-90: rgba(255, 255, 255, 0.9);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-60: rgba(255, 255, 255, 0.6);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-40: rgba(255, 255, 255, 0.4);
+  --white-10: rgba(255, 255, 255, 0.1);
+
+  --container-width: 1603px;
+  --sub-container-width: 1530px;
+}

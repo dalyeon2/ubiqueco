@@ -1,0 +1,130 @@
+<!-- s: HEADER -->
+<header class="header">
+    <div class="inner">
+        <a class="logo" href="./index.html" aria-label="Home">
+            <img
+                src="./assets/img/common/logo-sm.png"
+                data-logoscroll="./assets/img/common/logo-sm.png"
+                alt="UBIQUE">
+        </a>
+
+        <nav class="nav" aria-label="Primary">
+            <a class="item" href="./pages/about.html">
+                <span class="text" data-text="Company">
+                    <span class="label">Company</span>
+                </span>
+            </a>
+            <a class="item" href="./pages/aisolution.html">
+                <span class="text" data-text="AI Solution">
+                    <span class="label">AI Solution</span>
+                </span>
+            </a>
+            <a class="item" href="./pages/portfolio.html">
+                <span class="text" data-text="Portfolio">
+                    <span class="label">Portfolio</span>
+                </span>
+            </a>
+            <a class="item" href="./pages/inquiry.html">
+                <span class="text" data-text="Contact Us">
+                    <span class="label">Contact Us</span>
+                </span>
+            </a>
+            <button class="item iteminquiry" type="button" data-inquiry-toggle="true" aria-expanded="false" aria-controls="headerInquiryPanel">
+                <span class="text" data-text="Inquiry">
+                    <span class="label">Inquiry</span>
+                </span>
+            </button>
+
+            <button class="item itemhamburger" type="button" data-nav-toggle="true" aria-expanded="false" aria-controls="headerMobileMenu" aria-label="Open menu">
+                <span class="text">
+                    <span class="label">Menu</span>
+                </span>
+                <span class="bars" aria-hidden="true"></span>
+            </button>
+
+            <div class="mobilemenu" id="headerMobileMenu" aria-hidden="true">
+                <a class="item" href="./pages/about.html">Company</a>
+                <a class="item" href="./pages/aisolution.html">AI Solution</a>
+                <a class="item" href="./pages/portfolio.html">Portfolio</a>
+                <a class="item" href="./pages/inquiry.html">Contact Us</a>
+            </div>
+
+            <aside class="inquiry" id="headerInquiryPanel" aria-hidden="true">
+                <div class="top">
+                    <div class="head">
+                        <h3 class="title">빠른 상담 문의</h3>
+                        <p class="desc">AI 솔루션 / 웹 개발 / 디자인 / 영상 / 프로젝트</p>
+                    </div>
+                    <button class="close" type="button" data-inquiry-close="true" aria-label="Close inquiry">×</button>
+                </div>
+
+                <div class="body">
+                    <div class="meta" aria-label="Contact">
+                        <p class="title">Contact</p>
+                        <a class="link" href="mailto:ubique7@naver.com">
+                            <i class="icon mail" aria-hidden="true"></i>
+                            <span class="txt">ubique7@naver.com</span>
+                        </a>
+                        <div class="link links" role="group" aria-label="전화번호">
+                            <i class="icon tel" aria-hidden="true"></i>
+                            <span class="txt nums">
+                                <a class="num" href="tel:01071542537">010-7154-2537</a>
+                                <span class="sep" aria-hidden="true"> / </span>
+                                <a class="num" href="tel:0260103500">02-6010-3500</a>
+                                <span class="sep" aria-hidden="true"> / </span>
+                                <a class="num" href="tel:0221180716">02-2118-0716</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="line" aria-hidden="true"></div>
+
+                    <form class="form" id="headerInquiryForm" action="./pages/inquiry.html" method="get" novalidate>
+                        <input type="hidden" name="source" value="header-inquiry">
+                        <input type="hidden" name="topic" id="headerInquiryTopic" value="">
+
+                        <div class="field">
+                            <label class="label" for="headerIqName"><span>성함</span><b>*</b></label>
+                            <input id="headerIqName" type="text" name="name" placeholder="성함을 입력해주세요." autocomplete="name" aria-describedby="headerIqNameMsg">
+                            <p class="msg" id="headerIqNameMsg" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="headerIqEmail"><span>이메일</span><b>*</b></label>
+                            <input id="headerIqEmail" type="email" name="email" placeholder="이메일을 입력해주세요." autocomplete="email" aria-describedby="headerIqEmailMsg">
+                            <p class="msg" id="headerIqEmailMsg" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="headerIqContact"><span>연락처</span><b>*</b></label>
+                            <input id="headerIqContact" type="text" name="contact" placeholder="연락처를 입력해주세요." autocomplete="tel" aria-describedby="headerIqContactMsg">
+                            <p class="msg" id="headerIqContactMsg" aria-live="polite"></p>
+                        </div>
+
+                        <div class="field">
+                            <label class="label" for="headerIqMessage"><span>문의내용</span><b>*</b></label>
+                            <textarea id="headerIqMessage" name="message" rows="5" placeholder="문의내용을 입력해주세요." aria-describedby="headerIqMessageMsg"></textarea>
+                            <p class="msg" id="headerIqMessageMsg" aria-live="polite"></p>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="foot">
+                    <label class="agree">
+                        <input id="headerIqAgree" type="checkbox" name="agree" value="1" form="headerInquiryForm" aria-describedby="headerIqAgreeMsg">
+                        <span><button type="button" class="privacyopen">개인정보처리방침</button>에 동의합니다. <b>*</b></span>
+                    </label>
+                    <p class="agreemsg" id="headerIqAgreeMsg" aria-live="polite"></p>
+                    <button class="send" type="submit" form="headerInquiryForm">
+                        <span>Send</span>
+                        <i aria-hidden="true"></i>
+                    </button>
+                </div>
+            </aside>
+            <button class="backdrop" type="button" data-inquiry-close="true" aria-label="Close inquiry"></button>
+        </nav>
+
+    </div>
+</header>
+<!-- e: HEADER -->

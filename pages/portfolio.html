@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icons/favicon.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="../assets/css/common.css?v=20260223">
+    <link rel="stylesheet" href="../assets/css/pages/portfolio.css?v=20260303p">
+    <title>Portfolio | UBIQUE KOREA</title>
+</head>
+
+<body data-page="portfolio">
+    <div id="header-container"></div>
+
+    <main class="subpage-content">
+        <!-- s: section 1 -->
+        <section class="cont1" aria-labelledby="portfolio-title">
+            <div class="container">
+                <div class="shell">
+                    <aside class="left" aria-label="Portfolio filter">
+                        <p class="label">Filter</p>
+                        <div class="menu" role="tablist" aria-label="Portfolio category tabs">
+                            <button class="item on" type="button" datacate="all" aria-selected="true">All</button>
+                            <button class="item" type="button" datacate="ux" aria-selected="false">Ux</button>
+                            <button class="item" type="button" datacate="bx" aria-selected="false">Bx</button>
+                            <button class="item" type="button" datacate="video" aria-selected="false">Video</button>
+                            <button class="item" type="button" datacate="space" aria-selected="false">Space</button>
+                            <button class="item" type="button" datacate="print" aria-selected="false">Print</button>
+                        </div>
+                    </aside>
+                    <div class="main">
+                        <div class="head">
+                            <h2 class="title" id="portfolio-title"><span class="typing" dataword="Portfolio"></span><span class="cursor">|</span></h2>
+                        </div>
+                        <div class="tools" aria-label="Portfolio tools">
+                            <div class="subtabs" aria-label="Portfolio internal filter">
+                                <div class="list" role="tablist" aria-label="Portfolio internal category tabs"></div>
+                            </div>
+                            <div class="search" role="search" aria-label="Portfolio search">
+                                <label class="sr-only" for="portfolio-search-input">Search projects</label>
+                                <input id="portfolio-search-input" type="text" placeholder="프로젝트명 또는 키워드를 입력하세요" autocomplete="off">
+                                <button class="clear" type="button" aria-label="검색어 초기화" title="검색어 초기화">
+                                    <i aria-hidden="true"></i>
+                                </button>
+                                <i aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="listwrap" aria-label="Portfolio project list">
+                            <div class="list"></div>
+                            <div class="moreguard" aria-hidden="true"></div>
+                            <div class="loading" role="status" aria-live="polite" aria-hidden="true">
+                                <span class="spinner" aria-hidden="true"></span>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- s: section 2 -->
+        <section class="cont2" aria-hidden="true">
+            <div class="pop" aria-hidden="true">
+                <div class="dim"></div>
+                <div class="box" role="dialog" aria-modal="true" aria-labelledby="poptitle">
+                    <button class="close" type="button" aria-label="팝업 닫기" title="팝업 닫기">
+                        <i class="closeicon" aria-hidden="true"></i>
+                    </button>
+                    <div class="left">
+                        <figure class="hero secmain" aria-label="대표 이미지">
+                            <span class="heroimg">
+                                <img class="pophero" src="" alt="" loading="lazy">
+                            </span>
+                            <span class="hovermeta" aria-hidden="true"></span>
+                            <span class="hovercta" aria-hidden="true">Go to Project</span>
+                        </figure>
+                        <div class="pager" role="navigation" aria-label="프로젝트 이동">
+                            <button class="prev" type="button" aria-label="이전 프로젝트">
+                                <span class="arrow" aria-hidden="true"></span>
+                                <span class="prevname"></span>
+                            </button>
+                            <button class="next" type="button" aria-label="다음 프로젝트">
+                                <span class="nextname"></span>
+                                <span class="arrow" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="panel">
+                            <div class="head">
+                                <h3 class="name" id="poptitle"></h3>
+                                <p class="meta"></p>
+                                <div class="top">
+                                    <div class="infos">
+                                        <div class="row">
+                                            <p class="key">클라이언트</p>
+                                            <p class="val popclient"></p>
+                                        </div>
+                                        <div class="row">
+                                            <p class="key">기간</p>
+                                            <p class="val popdate"></p>
+                                        </div>
+                                        <div class="row">
+                                            <a class="val poplink" href="" target="_blank" rel="noopener" aria-label="프로젝트 보기">
+                                                <span class="txt">View the Project</span>
+                                                <span class="ico" aria-hidden="true"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <p class="desc"></p>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="overview">
+                                    <h4 class="tit">Details</h4>
+                                    <div class="gallery">
+                                        <div class="popgal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+    <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to Top"></button>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <!-- ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <!-- ScrollTo Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+
+    <script src="../assets/js/common.js?v=20260304a"></script>
+    <script src="../assets/js/pages/portfolio.js?v=20260303c"></script>
+</body>
+
+</html>
