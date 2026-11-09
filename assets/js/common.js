@@ -182,12 +182,13 @@ async function loadComponents() {
                 return '/';
             }
         })();
-        const fallbackLogoSrc = '/assets/img/common/logo-sm-gray.png';
-        const fallbackAboutHref = new URL('pages/about.html', fallbackRootHref).href;
-        const fallbackPortfolioHref = new URL('pages/portfolio.html', fallbackRootHref).href;
-        const fallbackAiSolutionHref = new URL('pages/aisolution.html', fallbackRootHref).href;
-        const fallbackInquiryHref = new URL('pages/inquiry.html', fallbackRootHref).href;
-        const fallbackHomeHref = fallbackRootHref;
+        const isSubpage = !!window.location.pathname && window.location.pathname !== '/' && !/\/index\.html?$/i.test(window.location.pathname);
+        const fallbackLogoSrc = isSubpage ? '../assets/img/common/logo-sm-gray.png' : './assets/img/common/logo-sm-gray.png';
+        const fallbackAboutHref = isSubpage ? '../pages/about.html' : './pages/about.html';
+        const fallbackPortfolioHref = isSubpage ? '../pages/portfolio.html' : './pages/portfolio.html';
+        const fallbackAiSolutionHref = isSubpage ? '../pages/aisolution.html' : './pages/aisolution.html';
+        const fallbackInquiryHref = isSubpage ? '../pages/inquiry.html' : './pages/inquiry.html';
+        const fallbackHomeHref = isSubpage ? '../index.html' : './index.html';
 
         if (!headerHtml || !footerHtml) {
             console.warn('[common] component load fallback exhausted', {

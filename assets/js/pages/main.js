@@ -1146,12 +1146,12 @@ $(function () {
         5: 'back'
     };
     const cubeFaceLinkDefaults = {
-        front: '/aisolution/',
-        right: '/portfolio/space/',
-        back: '/aisolution/',
+        front: './pages/aisolution.html',
+        right: './pages/portfolio.html',
+        back: './pages/aisolution.html',
         left: 'https://www.ubique.kr/',
-        top: '/about/',
-        bottom: '/portfolio/'
+        top: './pages/about.html',
+        bottom: './pages/portfolio.html'
     };
     const getFaceHrefDatasetKey = (face) => {
         const safeFace = ((face || '') + '').trim();
@@ -2502,7 +2502,7 @@ $(function () {
     const $more = $section.find('.more').first();
     if (!$items.length || !$stage.length) return;
 
-    const portfolioHref = '/portfolio/';
+    const portfolioHref = './pages/portfolio.html';
     if ($more.length) {
         $more.on('click', function () {
             window.location.href = portfolioHref;
@@ -2550,8 +2550,8 @@ $(function () {
     };
     const buildPortfolioCategoryUrl = (cate) => {
         const safeCate = ((cate || '') + '').trim().toLowerCase() || 'all';
-        if (safeCate === 'all') return '/portfolio/';
-        return `/portfolio/${encodeURIComponent(safeCate)}`;
+        if (safeCate === 'all') return './pages/portfolio.html';
+        return `./pages/portfolio.html?cate=${encodeURIComponent(safeCate)}`;
     };
     const buildPortfolioDetailUrl = (cate, inner, projectKey) => {
         const safeCate = ((cate || '') + '').trim().toLowerCase() || 'all';
@@ -2560,7 +2560,7 @@ $(function () {
         if (!safeKey || safeCate === 'all') {
             return buildPortfolioCategoryUrl(safeCate);
         }
-        return `/portfolio/${encodeURIComponent(safeCate)}/${encodeURIComponent(safeInner)}/${encodeURIComponent(safeKey)}`;
+        return `./pages/portfolio.html?cate=${encodeURIComponent(safeCate)}&inner=${encodeURIComponent(safeInner)}&key=${encodeURIComponent(safeKey)}`;
     };
 
     const normalizeShotTitle = (item, fallback) => {

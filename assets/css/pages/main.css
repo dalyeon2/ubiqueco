@@ -1728,7 +1728,7 @@ body[data-page="main"].introout .logo {
     opacity: 0;
     transform: translateX(-8px) scale(0.88);
     transition: opacity 0.24s ease, transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
-    background: url("/assets/img/main/icon01.png") no-repeat center / contain;
+    background: url("../../img/main/icon01.png") no-repeat center / contain;
     pointer-events: none;
 }
 

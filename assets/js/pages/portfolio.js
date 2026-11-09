@@ -875,7 +875,7 @@ $(function () {
         space: 'SPACE',
         print: 'PRINT'
     };
-    const fallbackThumbSrc = '/assets/img/common/default-image.png';
+    const fallbackThumbSrc = '../assets/img/common/default-image.png';
     const toStringArray = (value) => {
         if (Array.isArray(value)) {
             return value.map((item) => ((item || '') + '').trim()).filter(Boolean);
